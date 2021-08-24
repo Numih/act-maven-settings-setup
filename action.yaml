@@ -15,7 +15,7 @@ runs:
   steps:
    - run: echo ${{ inputs.url }}
      shell: bash
-   - run: export INPUT_URL=${{ inputs.url }}
+   - run: export INPUT_URL=${{ inputs.url }} >> $GITHUB_ENV
      shell: bash
    - run: echo $INPUT_URL
      shell: bash
