@@ -13,7 +13,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-   - run: echo $INPUT_URL
+   - run: echo ${{ inputs.url }} | ${{ inputs.user }} | ${{ inputs.password }}
      shell: bash
    - run: printenv
      shell: bash
