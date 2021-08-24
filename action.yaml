@@ -4,15 +4,12 @@ inputs:
   url:
     description: 'Repository Url'
     required: true
-    default: ${{ secrets.MAVEN_REPOSITORY_URL }}
   user:
     description: 'Repository User'
     required: true
-    default: ${{ secrets.MAVEN_REPOSITORY_USER }}
   password:
     description: 'Repository Password'
     required: true
-    default: ${{ secrets.MAVEN_REPOSITORY_PASSWORD }}
 runs:
   using: "composite"
   steps:
