@@ -1,15 +1,18 @@
 name: 'Setup maven settings'
 description: 'Creates a settings.xml file on folder .m2 for connecting on private repositories'
 inputs:
-  user:
-    description: 'Repository User'
-    required: true
-  password:
-    description: 'Repository Password'
-    required: true
   url:
     description: 'Repository Url'
     required: true
+    default: ${{ secrets.MAVEN_REPOSITORY_URL }}
+  user:
+    description: 'Repository User'
+    required: true
+    default: ${{ secrets.MAVEN_REPOSITORY_USER }}
+  password:
+    description: 'Repository Password'
+    required: true
+    default: ${{ secrets.MAVEN_REPOSITORY_PASSWORD }}
 runs:
   using: "composite"
   steps:
